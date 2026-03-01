@@ -1,0 +1,35 @@
+export default function ProfileCard() {
+  return (
+    <div className="profile-card">
+      <div className="profile-img-wrapper">
+        <img
+          src="https://i.pravatar.cc/150?img=12"
+          alt="Profile"
+          className="profile-img"
+        />
+        <div className="camera-icon">📷</div>
+      </div>
+
+      <h2>Juan Yanza</h2>
+      <p className="title">Front-End Developer</p>
+
+      <div className="stats">
+        <div>
+          <span className="orange">32</span>
+          <p>Projects Completed</p>
+        </div>
+        <div>
+          <span className="green">26</span>
+          <p>Clients Satisfied</p>
+        </div>
+        <div>
+          <span className="blue">6</span>
+          <p>Active Projects</p>
+        </div>
+      </div>
+
+      <button className="profile-btn">View Public Profile</button>
+      <p className="profile-link">https://domain.com/juan</p>
+    </div>
+  );
+}
