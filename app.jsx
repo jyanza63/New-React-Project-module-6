@@ -1,23 +1,20 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Counter from "./pages/Counter";
-import "./App.css";
+import ProfileCard from "./components/ProfileCard";
+import SettingsForm from "./components/SettingsForm";
+import Tabs from "./components/Tabs";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <nav className="nav">
-        <h2 className="brand">TReact • Juan Yanza</h2>
-        <div className="links">
-          <Link to="/">Home</Link>
-          <Link to="/counter">Counter</Link>
-        </div>
-      </nav>
+    <div className="container">
+      <div className="cover"></div>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/counter" element={<Counter />} />
-      </Routes>
-    </BrowserRouter>
+      <div className="content">
+        <ProfileCard />
+
+        <div className="settings-box">
+          <Tabs />
+          <SettingsForm />
+        </div>
+      </div>
+    </div>
   );
 }
